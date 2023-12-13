@@ -144,7 +144,7 @@ describe("DateMath.plus", () => {
     const date = { month: 1, day: 14, year: 2023 };
 
     expect(DateMath.set(date).plus({ day: 2 }).toISO()).toMatchInlineSnapshot(
-      '"2023-02-15T23:00:00.000Z"'
+      '"2023-02-15T16:00:00.000Z"'
     );
   });
 
@@ -166,7 +166,7 @@ describe("DateMath.plus", () => {
 
     expect(
       DateMath.set(date).plus({ day: 2 }).toMillis()
-    ).toMatchInlineSnapshot("1676502000000");
+    ).toMatchInlineSnapshot("1676476800000");
   });
 
   test("Add 2 days to a given date and return date in JSDate string", () => {
@@ -244,7 +244,7 @@ describe("DateMath.minus", () => {
     const date = { month: 1, day: 14, year: 2023 };
 
     expect(DateMath.set(date).minus({ day: 2 }).toISO()).toMatchInlineSnapshot(
-      '"2023-02-11T23:00:00.000Z"'
+      '"2023-02-11T16:00:00.000Z"'
     );
   });
 
@@ -266,7 +266,7 @@ describe("DateMath.minus", () => {
 
     expect(
       DateMath.set(date).minus({ day: 2 }).toMillis()
-    ).toMatchInlineSnapshot("1676156400000");
+    ).toMatchInlineSnapshot("1676131200000");
   });
 
   test("Subtract 2 days to a given date and return date in string format string", () => {

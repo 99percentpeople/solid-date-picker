@@ -1,8 +1,8 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
 
-:root {
+#picker {
   --before-bg: #aad1e9;
   --before-color: #0277bd;
   --hover-color: #d2d4d7;
@@ -17,6 +17,6 @@
   background-color: var(--hover-color);
 }
 
-.dark {
+[data-theme="dark"] {
   --before-bg: #335a72;
 }

@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
-  darkMode: "class",
+  darkMode: ["class", "[data-theme='dark']"],
   theme: {
     extend: {
       colors: {
@@ -23,7 +23,7 @@ module.exports = {
       },
       lineHeight: {
         time: "20px",
-      }
+      },
     },
     screens: {
       smallMobile: {
@@ -45,8 +45,11 @@ module.exports = {
   },
   daisyui: {
     themes: false,
+    themeRoot: "#picker", // The element that receives theme color CSS variables
   },
   prefix: "rn-",
-
+  corePlugins: {
+    preflight: false,
+  },
   plugins: [require("daisyui")],
 };
